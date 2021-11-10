@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+        title Attributes Concepts
+    body
+        div.page-section
+            img(src="dummy-image.png" alt="A Dummy Image")
+            div.sub-page-section(data-content-elements="./dummy/dummy.txt")
+        
+        //- Adding Javascript Code into the PUG File.
+        - const myAttributesList = {src: "./dummy/dummy.png", alt: "A Dummy Image"}
+        
+        //- Adding Classes and ID's to the elements in a different way
+        img&attributes(myAttributesList)
+
+        div.input-container
+            input(type="text" name="name" id="name" required)
+            label(for="Name") Name
